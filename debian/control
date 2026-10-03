@@ -1,0 +1,12 @@
+Package: time-doctor
+Version: @VERSION@
+Section: admin
+Priority: optional
+Architecture: amd64
+Depends: python3 (>= 3.9), systemd
+Recommends: chrony
+Maintainer: Time Doctor Team <time-doctor@example.invalid>
+Description: диагностика синхронизации времени (timezone, chrony/NTP)
+ Только читает состояние системы: часовой пояс, механизм синхронизации,
+ источники, offset/stratum, доступность NTP-серверов; экспортирует отчёт.
+ Время не изменяет.

@@ -1,0 +1,28 @@
+image: debian:bookworm
+
+stages:
+  - lint
+  - test
+  - package
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq python3 python3-pyflakes dpkg > /dev/null
+
+lint:
+  stage: lint
+  script:
+    - ./scripts/lint.sh
+
+test:
+  stage: test
+  script:
+    - ./scripts/test.sh
+
+package:
+  stage: package
+  script:
+    - ./scripts/package.sh
+    - dpkg-deb -I dist/*.deb
+  artifacts:
+    paths:
+      - dist/

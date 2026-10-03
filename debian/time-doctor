@@ -1,0 +1,2 @@
+#!/bin/sh
+exec env PYTHONPATH=/usr/lib/time-doctor PYTHONDONTWRITEBYTECODE=1 python3 -m time_doctor "$@"

@@ -1,0 +1,5 @@
+time-doctor (0.1.0) stable; urgency=low
+
+  * Первый учебный релиз: status/sources/check/doctor/report.
+
+ -- Time Doctor Team <time-doctor@example.invalid>  Sat, 19 Sep 2026 12:00:00 +0300
